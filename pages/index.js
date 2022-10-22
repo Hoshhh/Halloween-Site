@@ -1,12 +1,24 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import { useState } from 'react'
 
 export default function Home() {
+  const [color, setColor] = useState('#F75F1C')
+
+  const handleMouseHover = (e) => {
+    setColor('#FF9A00')
+  }
+
+  const handleMouseLeave = (e) => {
+    setColor('#F75F1C')
+  }
+
   return (
     <div className="container flex flex-col w-screen h-screen mx-auto justify-center items-center">
       <xml version="1.0" encoding="utf-8" />
-      <svg version="1.1" className="fill-dark-orange" height={500} width={500} id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      <svg version="1.1" className=" drop-shadow-svg animate-pulse w-5/12 h-5/12 m-28" fill={color} id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
         viewBox="0 0 2375.74 1711.121" xmlSpace="preserve">
       <g>
         <path d="M503.916,690.078c0,0-80.203-405.076,17.259-634.518c0,0,207.107,429.442,345.178,445.685L503.916,690.078z"/>
@@ -21,7 +33,11 @@ export default function Home() {
           l-57.868,281.218C178.052,1152.872,121.867,1016.46,82.596,854.545z"/>
       </g>
       </svg>
-      <h1 className='text-5xl font-bold text-dark-orange'>Hello World</h1>
+      <Link href="/home">
+        <button onMouseLeave={handleMouseLeave} onMouseEnter={handleMouseHover} className='text-4xl font-bold text-dark-orange border-4 border-dark-orange p-3 rounded-md shadow-button shadow-dark-orange hover:text-light-orange hover:border-light-orange hover:shadow-light-orange animate-pulse'>
+          Enter
+        </button>
+      </Link>
     </div>
   )
 }
