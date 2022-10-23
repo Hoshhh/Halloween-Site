@@ -17,7 +17,7 @@ module.exports = {
         'green': '#85E21F',
       },
       dropShadow: {
-        'svg': '0 0 15px rgba(247,95,28, 0.75)'
+        'svg': '0 0 15px rgba(247,95,28, 0.75)',
       }, 
       boxShadow: {
         'button': '0 0 15px rgba(247,95,28, 0.75)'
