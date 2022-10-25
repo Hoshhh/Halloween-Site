@@ -1,5 +1,6 @@
 import Image from "next/image"
 import Navbar from "../components/Navbar"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -12,7 +13,9 @@ export default function Home() {
                     <div className="text-lg mx-6 md:text-2xl mb-4">A place to get <span className="text-green">recommendations</span> for all sorts of spooky content!</div>
                     <div className="text-lg mx-6 md:text-2xl mb-4">Looking for a scary <span className="text-light-orange">movie</span> or maybe a <span className="text-light-orange">costume idea</span>?</div>
                     <div className="text-lg mx-6 md:text-2xl mb-4">
-                        <button className='mt-12 mb-12 text-4xl font-bold text-white border-4 border-white p-3 rounded-md shadow-button shadow-white hover:text-light-orange hover:border-light-orange hover:shadow-light-orange animate-pulse'>Explore</button>
+                        <Link href="/videos">
+                            <button className='mt-12 mb-12 text-4xl font-bold text-white border-4 border-white p-3 rounded-md shadow-button shadow-white hover:text-light-orange hover:border-light-orange hover:shadow-light-orange animate-pulse'>Explore</button>
+                        </Link>
                     </div>
                 </div>
             </div>
