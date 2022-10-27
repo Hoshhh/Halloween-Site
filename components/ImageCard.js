@@ -1,13 +1,13 @@
+import Image from "next/image"
 
-
-const MediaCard = ({ id, title, url, desc }) => {
+const ImageCard = ({ id, title, img, desc }) => {
   return (
     <div className="container flex flex-col max-w-md bg-purple items-center p-6 m-2 rounded-md">
-        <iframe width="400" height="260" src={url} title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        <img src={img} alt="Movie cover" width="176" height="100"/>
         <h1 className="text-xl pb-6 font-bold text-white">{title}</h1>
         <h2 className="text-md">{desc}</h2>
     </div>
   )
 }
 
-export default MediaCard
+export default ImageCard
