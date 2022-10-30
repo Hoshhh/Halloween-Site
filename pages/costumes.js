@@ -22,7 +22,7 @@ export default function Costumes({ costumes }) {
 }
 
 export async function getServerSideProps() {
-    const response = await fetch('http://localhost:3000/api/costumes' || 'https://halloweenhub.vercel.app/api/costumes')
+    const response = await fetch('https://halloweenhub.vercel.app/api/costumes')
     const data = await response.json();
 
     return {

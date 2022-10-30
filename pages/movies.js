@@ -23,7 +23,7 @@ export default function Movies({ movies }) {
 }
 
 export async function getServerSideProps() {
-    const response = await fetch('http://localhost:3000/api/movies' || 'https://halloweenhub.vercel.app/api/movies')
+    const response = await fetch('https://halloweenhub.vercel.app/api/movies')
     const data = await response.json();
 
     return {
