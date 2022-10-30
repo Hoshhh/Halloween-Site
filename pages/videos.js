@@ -23,7 +23,7 @@ export default function Videos({ videos }) {
 }
 
 export async function getServerSideProps() {
-    const response = await fetch('http://localhost:3000/api/videos')
+    const response = await fetch('http://localhost:3000/api/videos' || 'https://halloweenhub.vercel.app/api/videos')
     const data = await response.json();
 
     return {
