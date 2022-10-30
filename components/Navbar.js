@@ -4,7 +4,7 @@ const Navbar = () => {
   return (
     <nav>
         <div className="max-w-8xl  mx-auto py-6 h-vh min-w-fit">
-            <div className="flex justify-between items-center text-white">
+            <div className="flex justify-between items-center text-white cursor-pointer">
                 <Link href='/home'>
                     <div> 
                         <xml version="1.0" encoding="utf-8" />
