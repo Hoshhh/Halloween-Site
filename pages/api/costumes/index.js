@@ -3,10 +3,8 @@ import Costume from "../../../models/Costume";
 
 export default async function handler(req, res) {
     const { method } = req;
-
-    console.log('connecting to mongo...')
+    
     await dbConnect();
-    console.log('connected!')
 
     if (method === "GET") {
         try{
